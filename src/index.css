@@ -1,0 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap');
+@import "tailwindcss";
+
+/* Apply Syne font to everything */
+body {
+  font-family: 'Syne', ui-sans-serif, system-ui, sans-serif;
+}
