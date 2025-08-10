@@ -1,6 +1,8 @@
+import Blog from "../Components/Blog"
 import Companies from "../Components/Companies"
 import Features from "../Components/Features"
 import Hero from "../Components/Hero"
+import Impact from "../Components/Impact"
 import Navbar from "../Components/Navbar"
 
 const Home = () => {
@@ -10,6 +12,8 @@ const Home = () => {
         <Hero />
         <Companies />
         <Features />
+        <Impact />
+        <Blog />
     </div>
   )
 }
