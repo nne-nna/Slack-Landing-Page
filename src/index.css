@@ -1,7 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap");
 @import "tailwindcss";
 
 /* Apply Syne font to everything */
 body {
-  font-family: 'Syne', ui-sans-serif, system-ui, sans-serif;
+  font-family: "Syne", ui-sans-serif, system-ui, sans-serif;
+}
+
+.text-3d {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: white;
+  text-shadow: 1px 1px 0 #000, 2px 2px 0 #000, 3px 3px 0 #000, 4px 4px 0 #000,
+    5px 5px 0 #000, 6px 6px 10px rgba(0, 0, 0, 0.5);
+  margin-bottom: 20px;
 }
