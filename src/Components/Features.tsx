@@ -12,7 +12,7 @@ const Features = () => {
       {/* Feature Block 1 */}
       <div className="relative w-full lg:w-4/5 animate-stagger-fade-in stagger-1">
         <div className="flex flex-col lg:flex-row bg-white rounded-2xl overflow-hidden shadow-lg border-t-3 border-l-3 border-b-6 border-r-6 border-black">
-          <div className="py-6 px-6 lg:py-12 lg:pr-12 flex-1">
+          <div className="py-6 px-6 lg:py-12 flex-1">
             <img
               src="feature-frame-1.png"
               alt="Left Image 1"
@@ -68,7 +68,7 @@ const Features = () => {
             </div>
           </div>
           <div className="border-b-2 border-black mx-6 lg:border-r-2 lg:border-b-0 lg:my-12 lg:mx-0 lg:w-0.5"></div>
-          <div className="py-6 px-6 lg:py-12 lg:pl-12 flex-1">
+          <div className="py-6 px-6 lg:py-12 flex-1">
             <img
               src="feature-frame-2.png"
               alt="Right Image 2"
@@ -88,7 +88,7 @@ const Features = () => {
       {/* Feature Block 3 */}
       <div className="relative w-full lg:w-4/5 animate-stagger-fade-in stagger-3">
         <div className="flex flex-col lg:flex-row bg-white rounded-2xl overflow-hidden shadow-lg border-t-3 border-l-3 border-b-6 border-r-6 border-black">
-          <div className="py-6 px-6 lg:py-12 lg:pr-12 flex-1">
+          <div className="py-6 px-6 lg:py-12  flex-1">
             <img
               src="feature-frame-3.png"
               alt="Left Image 3"

@@ -32,9 +32,9 @@ const Blog: React.FC = () => {
               </div>
             </div>
 
-            <div className="flex items-center justify-end">
-              <span className="text-sm font-bold mr-1">See All</span>
-              <ChevronRight className="w-4 h-4 font-bold" />
+            <div className="flex items-center justify-end group cursor-pointer">
+              <span className="text-sm font-bold mr-1 transition-transform duration-200 group-hover:scale-105 group-hover:text-gray-700">See All</span>
+              <ChevronRight className="w-4 h-4 font-bold transition-transform duration-200 group-hover:translate-x-1" />
             </div>
           </div>
 
@@ -56,9 +56,9 @@ const Blog: React.FC = () => {
               </div>
             </div>
 
-            <div className="flex items-center justify-end">
-              <span className="text-sm font-bold mr-1">Read More</span>
-              <ChevronRight className="w-4 h-4 font-bold" />
+            <div className="flex items-center justify-end group cursor-pointer">
+              <span className="text-sm font-bold mr-1 transition-transform duration-200 group-hover:scale-105 group-hover:text-gray-700">Read More</span>
+              <ChevronRight className="w-4 h-4 font-bold transition-transform duration-200 group-hover:translate-x-1" />
             </div>
           </div>
 
@@ -80,9 +80,9 @@ const Blog: React.FC = () => {
               </div>
             </div>
 
-            <div className="flex items-center justify-end">
-              <span className="text-sm font-bold mr-1">Read More</span>
-              <ChevronRight className="w-4 h-4 font-bold" />
+            <div className="flex items-center justify-end group cursor-pointer">
+              <span className="text-sm font-bold mr-1 transition-transform duration-200 group-hover:scale-105 group-hover:text-gray-700">Read More</span>
+              <ChevronRight className="w-4 h-4 font-bold transition-transform duration-200 group-hover:translate-x-1" />
             </div>
           </div>
 
@@ -104,9 +104,9 @@ const Blog: React.FC = () => {
               </div>
             </div>
 
-            <div className="flex items-center justify-end">
-              <span className="text-sm font-bold mr-1">Read More</span>
-              <ChevronRight className="w-4 h-4 font-bold" />
+            <div className="flex items-center justify-end group cursor-pointer">
+              <span className="text-sm font-bold mr-1 transition-transform duration-200 group-hover:scale-105 group-hover:text-gray-700">Read More</span>
+              <ChevronRight className="w-4 h-4 font-bold transition-transform duration-200 group-hover:translate-x-1" />
             </div>
           </div>
         </div>
