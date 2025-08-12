@@ -52,7 +52,7 @@ const Impact = () => {
           </div>
         </div>
 
-        <div className="flex flex-col md:flex-row justify-center gap-12 mb-12 lg:mb-16 max-w-3xl mx-auto pl-0 md:pl-24">
+        <div className="flex flex-col md:flex-row justify-center gap-12 mb-8 lg:mb-16 max-w-3xl mx-auto pl-0 md:pl-24">
           <div className="flex-1 max-w-xs mx-auto mb-4 md:mb-0">
             <div className="text-6xl font-bold text-yellow-500 mb-4">
               <img
