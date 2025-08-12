@@ -6,32 +6,32 @@ const Impact = () => {
           <img
             src="/notif-1.png"
             alt="Notification 1"
-            className="absolute -top-8 left-0 z-50 hidden md:block"
+            className="absolute -top-8 left-0 hidden md:block"
           />
           <img
             src="/notif-2.png"
             alt="Notification 2"
-            className="absolute -top-8 right-0 z-50 hidden md:block"
+            className="absolute -top-8 right-0 hidden md:block"
           />
           <img
             src="/notif-3.png"
             alt="Notification 3"
-            className="absolute top-8 -left-8 z-50 hidden md:block"
+            className="absolute top-8 -left-8 hidden md:block"
           />
           <img
             src="/notif-4.png"
             alt="Notification 4"
-            className="absolute top-8 -right-8 z-50 hidden md:block"
+            className="absolute top-8 -right-8 hidden md:block"
           />
           <img
             src="/notif-5.png"
             alt="Notification 5"
-            className="absolute top-24 left-0 z-50 hidden md:block"
+            className="absolute top-24 left-0 hidden md:block"
           />
           <img
             src="/notif-6.png"
             alt="Notification 6"
-            className="absolute top-24 right-0 z-50 hidden md:block"
+            className="absolute top-24 right-0 hidden md:block"
           />
 
           <h1 className="text-xl font-bold mb-4">

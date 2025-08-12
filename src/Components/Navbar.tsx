@@ -21,7 +21,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-white border-b-2 border-black shadow-sm h-16">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-white border-b-2 border-black shadow-sm h-16 w-full">
       <div className="max-w-full mx-auto flex items-center justify-between h-full">
         <div className="flex items-center px-4">
           <img src="/Brand-Logo.png" alt="Slack" className="h-8 w-auto" />
@@ -168,7 +168,7 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {isMobileOpen && (
-        <div className="lg:hidden bg-white border-b-2 border-black shadow-sm absolute top-16 left-0 w-full z-50 animate-fade-in-up">
+        <div className="lg:hidden bg-white border-b-2 border-black shadow-sm fixed top-16 left-0 w-full z-40 animate-fade-in-up">
           <div className="px-6 py-4 space-y-4">
             {/* Products */}
             <div>

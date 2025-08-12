@@ -28,7 +28,7 @@ const Hero = () => {
         <img
           src="/feature-vector1.png" 
           alt="Bouncing Vector 1"
-          className="lg:hidden absolute top-10 left-10 w-16 h-16 animate-bounce-around"
+          className="lg:hidden absolute top-30 left-10 w-16 h-16 animate-bounce-around"
           style={{ animationDelay: '0s' }}
         />
         <img
