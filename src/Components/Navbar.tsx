@@ -1,11 +1,22 @@
-import { useState, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Search, ChevronDown, Headset, Hamburger, X } from "lucide-react";
 
 const Navbar = () => {
   const [isProductsOpen, setIsProductsOpen] = useState(false);
   const [isMobileOpen, setIsMobileOpen] = useState(false);
   const [isMobileProductsOpen, setIsMobileProductsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false); 
   const timeoutRef = useRef<number | null>(null);
+
+  // Handle scroll event
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 10);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll); 
+  }, []);
 
   const handleMouseEnter = () => {
     if (timeoutRef.current) {
@@ -21,7 +32,11 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-white border-b-2 border-black shadow-sm h-16 w-full">
+    <nav
+      className={`fixed top-0 left-0 right-0 z-50 bg-white border-b-2 border-black h-16 w-full transition-shadow duration-300 ${
+        isScrolled ? "shadow-md" : "shadow-sm"
+      }`}
+    >
       <div className="max-w-full mx-auto flex items-center justify-between h-full">
         <div className="flex items-center px-4">
           <img src="/Brand-Logo.png" alt="Slack" className="h-8 w-auto" />
