@@ -88,7 +88,7 @@ const Impact = () => {
               alt="Background image"
             />
             <img
-              src="/video.png"
+              src="/thumbnail-image.png"
               className="w-full h-auto z-10 relative"
               alt="Video thumbnail"
             />
