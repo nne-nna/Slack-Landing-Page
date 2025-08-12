@@ -1,16 +1,243 @@
 @import url("https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap");
 @import "tailwindcss";
 
-/* Apply Syne font to everything */
 body {
   font-family: "Syne", ui-sans-serif, system-ui, sans-serif;
 }
 
 .text-3d {
-  font-size: 2.5rem;
+  font-size: 1.8rem; 
   font-weight: bold;
   color: white;
   text-shadow: 1px 1px 0 #000, 2px 2px 0 #000, 3px 3px 0 #000, 4px 4px 0 #000,
     5px 5px 0 #000, 6px 6px 10px rgba(0, 0, 0, 0.5);
   margin-bottom: 20px;
 }
+
+@media (min-width: 640px) {
+  .text-3d {
+    font-size: 2rem; 
+  }
+}
+
+@media (min-width: 1024px) {
+  .text-3d {
+    font-size: 2.5rem;
+  }
+}
+
+/* Animation Keyframes */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0.95);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes bounceAround {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  25% {
+    transform: translate(10px, -15px) rotate(5deg);
+  }
+  50% {
+    transform: translate(-10px, -25px) rotate(-5deg);
+  }
+  75% {
+    transform: translate(15px, -10px) rotate(3deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.05);
+  }
+}
+
+@keyframes staggerFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulseBorder {
+  0% {
+    border-color: #000;
+    box-shadow: 0 0 0 0 rgba(255, 199, 0, 0.7);
+  }
+  50% {
+    border-color: #ffc700;
+    box-shadow: 0 0 10px 2px rgba(255, 199, 0, 0.7);
+  }
+  100% {
+    border-color: #000;
+    box-shadow: 0 0 0 0 rgba(255, 199, 0, 0.7);
+  }
+}
+
+@keyframes parallax {
+  from {
+    transform: translateY(50px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes rotateScale {
+  0% {
+    transform: scale(1) rotate(0deg);
+  }
+  50% {
+    transform: scale(1.1) rotate(5deg);
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+/* Animation Classes */
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.animate-scale-in {
+  animation: scaleIn 0.3s ease-in-out forwards;
+}
+
+.animate-bounce {
+  animation: bounce 0.3s ease-in-out;
+}
+
+.animate-bounce-around {
+  animation: bounceAround 6s ease-in-out infinite;
+}
+
+.animate-zoom-in {
+  animation: zoomIn 0.3s ease-in-out forwards;
+}
+
+.animate-stagger-fade-in {
+  animation: staggerFadeIn 0.8s ease-out forwards;
+}
+
+.animate-pulse-border {
+  animation: pulseBorder 1.5s infinite;
+}
+
+.animate-parallax {
+  animation: parallax 1s ease-out forwards;
+}
+
+.animate-rotate-scale {
+  animation: rotateScale 0.4s ease-in-out;
+}
+
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.animate-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hover\:lift {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover\:lift:hover {
+  transform: translateY(-5px);
+  box-shadow: 4px 4px 0 #000;
+}
+
+.hover\:border-pulse {
+  transition: border-color 0.3s ease;
+}
+
+.hover\:border-pulse:hover {
+  border-color: #ffc700;
+}
+
+.hover\:underline-slide {
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.hover\:underline-slide::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color: #ffc700;
+  transition: width 0.3s ease;
+}
+
+.hover\:underline-slide:hover::after {
+  width: 100%;
+}
+
+.hover\:rotate-scale {
+  transition: transform 0.3s ease;
+}
+
+.hover\:rotate-scale:hover {
+  transform: scale(1.1) rotate(5deg);
+}
+
+/* Scroll Animation Trigger */
+[data-animate-on-scroll] {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+[data-animate-on-scroll].visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Staggered Animation Delays */
+.stagger-1 { animation-delay: 0.1s; }
+.stagger-2 { animation-delay: 0.2s; }
+.stagger-3 { animation-delay: 0.3s; }
+.stagger-4 { animation-delay: 0.4s; }
+.stagger-5 { animation-delay: 0.5s; }

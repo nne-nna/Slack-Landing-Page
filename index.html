@@ -9,5 +9,21 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const elements = document.querySelectorAll('[data-animate-on-scroll], .animate-on-scroll');
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+              }
+            });
+          },
+          { threshold: 0.2 }
+        );
+        elements.forEach((el) => observer.observe(el));
+      });
+    </script>
   </body>
 </html>

@@ -9,18 +9,18 @@ const Features = () => {
         backgroundImage: `url("data:image/svg+xml,%3Csvg width='100' height='40' viewBox='0 0 100 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0,5 Q25,0 50,5 T100,5' stroke='%23c5c3c6' stroke-width='1' fill='none' opacity='0.6'/%3E%3Cpath d='M0,15 Q25,10 50,15 T100,15' stroke='%23c5c3c6' stroke-width='1' fill='none' opacity='0.6'/%3E%3Cpath d='M0,25 Q25,20 50,25 T100,25' stroke='%23c5c3c6' stroke-width='1' fill='none' opacity='0.6'/%3E%3Cpath d='M0,35 Q25,30 50,35 T100,35' stroke='%23c5c3c6' stroke-width='1' fill='none' opacity='0.6'/%3E%3C/svg%3E")`,
       }}
     >
-      {/* First Feature Card with Vector on Bottom Right */}
-      <div className="relative w-4/5">
-        <div className="flex bg-white rounded-2xl overflow-hidden shadow-lg border-t-3 border-l-3 border-b-6 border-r-6 border-black">
-          <div className="py-12 pr-12 flex-1">
+      {/* Feature Block 1 */}
+      <div className="relative w-full lg:w-4/5 animate-stagger-fade-in stagger-1">
+        <div className="flex flex-col lg:flex-row bg-white rounded-2xl overflow-hidden shadow-lg border-t-3 border-l-3 border-b-6 border-r-6 border-black">
+          <div className="py-6 px-6 lg:py-12 lg:pr-12 flex-1">
             <img
               src="feature-frame-1.png"
               alt="Left Image 1"
-              className="max-w-full h-auto"
+              className="max-w-full h-auto hover:rotate-scale"
             />
           </div>
-          <div className="border-r-2 border-black my-4"></div>
-          <div className="p-12 flex-1 flex items-center">
+          <div className="border-b-2 border-black mx-6 lg:border-r-2 lg:border-b-0 lg:my-4 lg:mx-0 sm:block lg:block"></div>
+          <div className="p-6 lg:p-12 flex-1 flex items-center">
             <div className="w-full">
               <h2 className="text-xl font-bold text-black mb-4">
                 Bring Your Team Together
@@ -31,28 +31,27 @@ const Features = () => {
                 connect across departments, offices, time zones and even other
                 companies.
               </p>
-              <button className="mt-4 inline-flex items-center gap-2 border-2 border-black rounded-xl py-2 px-4 text-sm">
+              <button className="mt-4 inline-flex items-center gap-2 border-2 border-black rounded-xl py-2 px-4 text-sm transition-transform hover:bg-black hover:text-white hover:scale-105">
                 More about channels
                 <ExternalLink className="w-4 h-4" />
               </button>
             </div>
           </div>
         </div>
-        {/* Vector element for first card - bottom right */}
-        <div className="absolute bottom-0 -right-12 w-20 h-20 z-10">
+        <div className="absolute bottom-0 -right-12 w-20 h-20 z-10 hidden lg:block">
           <img
             src="feature-vector1.png"
             alt="Decorative vector 1"
-            className="w-full h-full"
+            className="w-full h-full animate-parallax"
           />
         </div>
       </div>
 
-      {/* Second Feature Card with Vector on Bottom Left */}
-      <div className="relative w-4/5">
-        <div className="flex bg-white rounded-2xl overflow-hidden shadow-lg border-t-3 border-l-3 border-b-6 border-r-6 border-black">
+      {/* Feature Block 2 */}
+      <div className="relative w-full lg:w-4/5 animate-stagger-fade-in stagger-2">
+        <div className="flex flex-col-reverse lg:flex-row bg-white rounded-2xl overflow-hidden shadow-lg border-t-3 border-l-3 border-b-6 border-r-6 border-black">
           <div className="flex-1 flex items-center">
-            <div className="w-full p-12">
+            <div className="w-full p-6 lg:p-12">
               <h2 className="text-xl font-bold text-black mb-4">
                 Choose how you want to work
               </h2>
@@ -62,43 +61,42 @@ const Features = () => {
                 and video clips, or hop on a huddle to talk things out live.
                 <br />
               </p>
-              <button className="mt-4 inline-flex items-center gap-2 border-2 border-black rounded-xl py-2 px-4 text-sm">
+              <button className="mt-4 inline-flex items-center gap-2 border-2 border-black rounded-xl py-2 px-4 text-sm transition-transform hover:bg-black hover:text-white hover:scale-105">
                 Flexible Communication
                 <ExternalLink className="w-4 h-4" />
               </button>
             </div>
           </div>
-          <div className="border-r-2 border-black my-4"></div>
-          <div className="py-12 pl-12 flex-1">
+          <div className="border-b-2 border-black mx-6 lg:border-r-2 lg:border-b-0 lg:my-4 lg:mx-0 sm:block lg:block"></div>
+          <div className="py-6 px-6 lg:py-12 lg:pl-12 flex-1">
             <img
               src="feature-frame-2.png"
               alt="Right Image 2"
-              className="max-w-full h-auto"
+              className="max-w-full h-auto hover:rotate-scale"
             />
           </div>
         </div>
-        {/* Vector element for second card - bottom left */}
-        <div className="absolute bottom-0 -left-12 w-20 h-20 z-10">
+        <div className="absolute bottom-0 -left-12 w-20 h-20 z-10 hidden lg:block">
           <img
             src="feature-vector2.png"
             alt="Decorative vector 2"
-            className="w-full h-full"
+            className="w-full h-full animate-parallax"
           />
         </div>
       </div>
 
-      {/* Third Feature Card with Vector on Bottom Right */}
-      <div className="relative w-4/5">
-        <div className="flex bg-white rounded-2xl overflow-hidden shadow-lg border-t-3 border-l-3 border-b-6 border-r-6 border-black">
-          <div className="py-12 pr-12 flex-1">
+      {/* Feature Block 3 */}
+      <div className="relative w-full lg:w-4/5 animate-stagger-fade-in stagger-3">
+        <div className="flex flex-col lg:flex-row bg-white rounded-2xl overflow-hidden shadow-lg border-t-3 border-l-3 border-b-6 border-r-6 border-black">
+          <div className="py-6 px-6 lg:py-12 lg:pr-12 flex-1">
             <img
               src="feature-frame-3.png"
               alt="Left Image 3"
-              className="max-w-full h-auto"
+              className="max-w-full h-auto hover:rotate-scale"
             />
           </div>
-          <div className="border-r-2 border-black my-4"></div>
-          <div className="p-12 flex-1 flex items-center">
+          <div className="border-b-2 border-black mx-6 lg:border-r-2 lg:border-b-0 lg:my-4 lg:mx-0 sm:block lg:block"></div>
+          <div className="p-6 lg:p-12 flex-1 flex items-center">
             <div className="w-full">
               <h2 className="text-xl font-bold text-black mb-4">
                 Move faster with your tools in one place
@@ -108,19 +106,18 @@ const Features = () => {
                 by switching tabs less. And with powerful tools like Workflow
                 Builder, you can automate away routine tasks.
               </p>
-              <button className="mt-4 inline-flex items-center gap-2 border-2 border-black rounded-xl py-2 px-4 text-sm">
+              <button className="mt-4 inline-flex items-center gap-2 border-2 border-black rounded-xl py-2 px-4 text-sm transition-transform hover:bg-black hover:text-white hover:scale-105">
                 Learn More about channels
                 <ExternalLink className="w-4 h-4" />
               </button>
             </div>
           </div>
         </div>
-        {/* Vector element for third card - bottom right */}
-        <div className="absolute bottom-0 -right-14 w-20 h-20 z-10">
+        <div className="absolute bottom-0 -right-14 w-20 h-20 z-10 hidden lg:block">
           <img
             src="feature-vector3.png"
             alt="Decorative vector 3"
-            className="w-full h-full"
+            className="w-full h-full animate-parallax"
           />
         </div>
       </div>
