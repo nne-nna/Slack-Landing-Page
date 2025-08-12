@@ -55,7 +55,7 @@ const Impact = () => {
         <div className="flex flex-col md:flex-row justify-center gap-12 mb-16 max-w-3xl mx-auto pl-0 md:pl-24">
           <div className="flex-1 max-w-xs mx-auto mb-4 md:mb-0">
             <div className="text-6xl font-bold text-yellow-500 mb-4">
-              <img src="/85%.png" alt="85%" className="mx-auto md:mx-0" />
+              <img src="/number1.png" alt="85%" className="mx-auto md:mx-0" />
             </div>
             <p className="text-sm">
               of users say Slack has improved communication*
@@ -63,7 +63,7 @@ const Impact = () => {
           </div>
           <div className="flex-1 max-w-xs mx-auto mb-4 md:mb-0">
             <div className="text-6xl font-bold text-green-500 mb-4">
-              <img src="/86%.png" alt="86%" className="mx-auto md:mx-0" />
+              <img src="/number2.png" alt="86%" className="mx-auto md:mx-0" />
             </div>
             <p className="text-sm">
               feel their ability to work remotely has improved*
@@ -71,7 +71,7 @@ const Impact = () => {
           </div>
           <div className="flex-1 max-w-xs mx-auto">
             <div className="text-6xl font-bold text-blue-500 mb-4">
-              <img src="/88%.png" alt="88%" className="mx-auto md:mx-0" />
+              <img src="/number3.png" alt="88%" className="mx-auto md:mx-0" />
             </div>
             <p className="text-sm">
               feel more connected to their <br />
