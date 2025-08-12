@@ -52,7 +52,7 @@ const Impact = () => {
           </div>
         </div>
 
-        <div className="flex flex-col md:flex-row justify-center gap-6 mb-16 max-w-3xl mx-auto pl-0 md:pl-24">
+        <div className="flex flex-col md:flex-row justify-center gap-12 mb-16 max-w-3xl mx-auto pl-0 md:pl-24">
           <div className="flex-1 max-w-xs mx-auto mb-4 md:mb-0">
             <div className="text-6xl font-bold text-yellow-500 mb-4">
               <img src="/85%.png" alt="85%" className="mx-auto md:mx-0" />
@@ -88,7 +88,7 @@ const Impact = () => {
               alt="Background image"
             />
             <img
-              src="/Video.png"
+              src="/video.png"
               className="w-full h-auto z-10 relative"
               alt="Video thumbnail"
             />

@@ -23,7 +23,7 @@ const Blog: React.FC = () => {
               <h3 className="text-lg font-bold leading-tight">
                 Slack as your Digital HQ
               </h3>
-              <div className="flex justify-center my-6">
+              <div className="flex justify-center">
                 <img
                   src="/blog1.png"
                   alt="Digital HQ Icon"
@@ -75,7 +75,7 @@ const Blog: React.FC = () => {
               <div className="mb-4">
                 <span className="text-sm font-medium mb-2 block">Webinar</span>
                 <h3 className="text-base font-semibold text-gray-900 leading-tight">
-                  Win the battle for talent with a digital HQ
+                  Win the battle for talent with a digital HQ 
                 </h3>
               </div>
             </div>

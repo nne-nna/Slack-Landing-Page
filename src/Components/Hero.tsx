@@ -47,7 +47,7 @@ const Hero = () => {
 
       <div className="hidden lg:flex flex-1 bg-yellow-400 items-center justify-center">
         <img
-          src="/hero-right-side.png"
+          src="/right-side.jpg"
           alt="Teamwork Illustration"
           className="max-w-full h-auto animate-parallax"
           style={{ animationDelay: '0.4s' }}
