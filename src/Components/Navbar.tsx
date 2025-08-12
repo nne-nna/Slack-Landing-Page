@@ -1,5 +1,5 @@
 import { useState, useRef } from "react";
-import { Search, ChevronDown, Headset, Menu } from "lucide-react";
+import { Search, ChevronDown, Headset, Hamburger, X } from "lucide-react";
 
 const Navbar = () => {
   const [isProductsOpen, setIsProductsOpen] = useState(false);
@@ -37,7 +37,9 @@ const Navbar = () => {
               <button className="flex items-center text-black hover:text-gray-800 font-medium hover:underline-slide">
                 Products
                 <ChevronDown
-                  className={`ml-1 h-4 w-4 transition-transform ${isProductsOpen ? "rotate-180" : ""}`}
+                  className={`ml-1 h-4 w-4 transition-transform ${
+                    isProductsOpen ? "rotate-180" : ""
+                  }`}
                 />
               </button>
 
@@ -72,7 +74,9 @@ const Navbar = () => {
                         href="#"
                         className="block p-3 rounded-md hover:bg-gray-100 hover:lift"
                       >
-                        <div className="font-semibold text-black">Slack Connect</div>
+                        <div className="font-semibold text-black">
+                          Slack Connect
+                        </div>
                         <div className="text-sm text-black">
                           Work with external partners
                         </div>
@@ -81,7 +85,9 @@ const Navbar = () => {
                         href="#"
                         className="block p-3 rounded-md hover:bg-gray-100 hover:lift"
                       >
-                        <div className="font-semibold text-black">Slack Huddles</div>
+                        <div className="font-semibold text-black">
+                          Slack Huddles
+                        </div>
                         <div className="text-sm text-black">
                           Lightweight audio and video meetings
                         </div>
@@ -130,10 +136,15 @@ const Navbar = () => {
         <div className="flex items-center">
           <button
             onClick={() => setIsMobileOpen(!isMobileOpen)}
-            className="lg:hidden text-black hover:text-gray-800 flex items-center"
+            className="lg:hidden text-black hover:text-gray-800 flex items-center transition-transform duration-300 ease-in-out"
           >
-            <Menu className="h-6 w-6" />
+            {isMobileOpen ? (
+              <X className="h-12 w-12 pr-4 transition-transform duration-300 rotate-90" />
+            ) : (
+              <Hamburger className="h-12 w-12 pr-4 transition-transform duration-300 rotate-0" />
+            )}
           </button>
+
           <div className="hidden lg:flex space-x-4">
             <div className="border-l-2 border-black h-16"></div>
             <button className="text-black hover:text-gray-800 flex items-center hover:animate-bounce">
@@ -167,7 +178,9 @@ const Navbar = () => {
               >
                 Products
                 <ChevronDown
-                  className={`h-4 w-4 transition-transform ${isMobileProductsOpen ? "rotate-180" : ""}`}
+                  className={`h-4 w-4 transition-transform ${
+                    isMobileProductsOpen ? "rotate-180" : ""
+                  }`}
                 />
               </button>
               {isMobileProductsOpen && (
@@ -194,7 +207,9 @@ const Navbar = () => {
                     href="#"
                     className="block p-3 rounded-md hover:bg-gray-100 hover:lift"
                   >
-                    <div className="font-semibold text-black">Slack Connect</div>
+                    <div className="font-semibold text-black">
+                      Slack Connect
+                    </div>
                     <div className="text-sm text-black">
                       Work with external partners
                     </div>
@@ -203,7 +218,9 @@ const Navbar = () => {
                     href="#"
                     className="block p-3 rounded-md hover:bg-gray-100 hover:lift"
                   >
-                    <div className="font-semibold text-black">Slack Huddles</div>
+                    <div className="font-semibold text-black">
+                      Slack Huddles
+                    </div>
                     <div className="text-sm text-black">
                       Lightweight audio and video meetings
                     </div>
