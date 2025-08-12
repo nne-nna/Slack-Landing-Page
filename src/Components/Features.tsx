@@ -19,7 +19,7 @@ const Features = () => {
               className="max-w-full h-auto hover:rotate-scale"
             />
           </div>
-          <div className="border-b-2 border-black mx-6 lg:border-r-2 lg:border-b-0 lg:my-4 lg:mx-0 sm:block lg:block"></div>
+          <div className="border-b-2 border-black mx-6 lg:border-r-2 lg:border-b-0 lg:my-12 lg:mx-0 lg:w-0.5"></div>
           <div className="p-6 lg:p-12 flex-1 flex items-center">
             <div className="w-full">
               <h2 className="text-xl font-bold text-black mb-4">
@@ -67,7 +67,7 @@ const Features = () => {
               </button>
             </div>
           </div>
-          <div className="border-b-2 border-black mx-6 lg:border-r-2 lg:border-b-0 lg:my-4 lg:mx-0 sm:block lg:block"></div>
+          <div className="border-b-2 border-black mx-6 lg:border-r-2 lg:border-b-0 lg:my-12 lg:mx-0 lg:w-0.5"></div>
           <div className="py-6 px-6 lg:py-12 lg:pl-12 flex-1">
             <img
               src="feature-frame-2.png"
@@ -95,7 +95,7 @@ const Features = () => {
               className="max-w-full h-auto hover:rotate-scale"
             />
           </div>
-          <div className="border-b-2 border-black mx-6 lg:border-r-2 lg:border-b-0 lg:my-4 lg:mx-0 sm:block lg:block"></div>
+          <div className="border-b-2 border-black mx-6 lg:border-r-2 lg:border-b-0 lg:my-12 lg:mx-0 lg:w-0.5"></div>
           <div className="p-6 lg:p-12 flex-1 flex items-center">
             <div className="w-full">
               <h2 className="text-xl font-bold text-black mb-4">
