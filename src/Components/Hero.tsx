@@ -1,6 +1,6 @@
 const Hero = () => {
   return (
-    <div className="flex flex-col lg:flex-row h-[calc(100vh-4rem)] border-b-2 border-black">
+    <div className="flex flex-col lg:flex-row h-screen border-b-2 border-black">
       <div className="relative flex-1 bg-purple-900 text-white p-6 md:p-12 flex flex-col justify-center border-b-2 lg:border-r-2 border-black">
         <h1 className="text-3xl sm:text-4xl md:text-5xl font-semibold mb-4 md:mb-6 animate-stagger-fade-in stagger-1">
           Great teamwork starts
