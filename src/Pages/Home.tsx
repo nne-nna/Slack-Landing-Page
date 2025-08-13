@@ -19,25 +19,27 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="min-h-screen overflow-x-hidden">
+    <div className="min-h-screen">
       <Navbar />
-      <div data-aos="fade-up" data-aos-delay="100">
-        <Hero />
-      </div>
-      <div data-aos="fade-up" data-aos-delay="200">
-        <Companies />
-      </div>
-      <div data-aos="fade-up" data-aos-delay="300">
-        <Features />
-      </div>
-      <div data-aos="fade-up" data-aos-delay="400">
-        <Impact />
-      </div>
-      <div data-aos="fade-up" data-aos-delay="500">
-        <Blog />
-      </div>
-      <div data-aos="fade-up" data-aos-delay="600">
-        <Footer />
+      <div className="pt-16"> 
+        <div data-aos="fade-up" data-aos-delay="100">
+          <Hero />
+        </div>
+        <div data-aos="fade-up" data-aos-delay="200">
+          <Companies />
+        </div>
+        <div data-aos="fade-up" data-aos-delay="300">
+          <Features />
+        </div>
+        <div data-aos="fade-up" data-aos-delay="400">
+          <Impact />
+        </div>
+        <div data-aos="fade-up" data-aos-delay="500">
+          <Blog />
+        </div>
+        <div data-aos="fade-up" data-aos-delay="600">
+          <Footer />
+        </div>
       </div>
     </div>
   );
