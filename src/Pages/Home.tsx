@@ -1,6 +1,6 @@
 import { useEffect } from "react";
-import AOS from "aos"; 
-import "aos/dist/aos.css"; 
+import AOS from "aos";
+import "aos/dist/aos.css";
 import Blog from "../Components/Blog";
 import Companies from "../Components/Companies";
 import Features from "../Components/Features";
@@ -13,15 +13,17 @@ const Home = () => {
   useEffect(() => {
     AOS.init({
       duration: 800,
-      once: true, 
-      offset: 100, 
+      once: true,
+      offset: 50, 
+      easing: "ease-out-cubic",
+      delay: 0,
     });
   }, []);
 
   return (
     <div className="min-h-screen">
       <Navbar />
-      <div className="pt-16"> 
+      <div className="pt-16">
         <div data-aos="fade-up" data-aos-delay="100">
           <Hero />
         </div>

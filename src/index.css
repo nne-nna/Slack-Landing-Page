@@ -26,71 +26,74 @@ body {
   }
 }
 
-/* Animation Keyframes */
 @keyframes fadeInUp {
   from {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translate3d(0, 20px, 0);
   }
   to {
     opacity: 1;
-    transform: translateY(0);
+    transform: translate3d(0, 0, 0);
   }
 }
 
 @keyframes scaleIn {
   from {
-    transform: scale(0.95);
+    opacity: 0;
+    transform: scale3d(0.95, 0.95, 1);
   }
   to {
-    transform: scale(1);
+    opacity: 1;
+    transform: scale3d(1, 1, 1);
   }
 }
 
 @keyframes bounce {
   0%, 100% {
-    transform: translateY(0);
+    transform: translate3d(0, 0, 0);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
   }
   50% {
-    transform: translateY(-5px);
+    transform: translate3d(0, -5px, 0);
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
   }
 }
 
 @keyframes bounceAround {
   0% {
-    transform: translate(0, 0) rotate(0deg);
+    transform: translate3d(0, 0, 0) rotate(0deg);
   }
   25% {
-    transform: translate(10px, -15px) rotate(5deg);
+    transform: translate3d(10px, -15px, 0) rotate(5deg);
   }
   50% {
-    transform: translate(-10px, -25px) rotate(-5deg);
+    transform: translate3d(-10px, -25px, 0) rotate(-5deg);
   }
   75% {
-    transform: translate(15px, -10px) rotate(3deg);
+    transform: translate3d(15px, -10px, 0) rotate(3deg);
   }
   100% {
-    transform: translate(0, 0) rotate(0deg);
+    transform: translate3d(0, 0, 0) rotate(0deg);
   }
 }
 
 @keyframes zoomIn {
   from {
-    transform: scale(1);
+    transform: scale3d(1, 1, 1);
   }
   to {
-    transform: scale(1.05);
+    transform: scale3d(1.05, 1.05, 1);
   }
 }
 
 @keyframes staggerFadeIn {
   from {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translate3d(0, 30px, 0) scale3d(0.95, 0.95, 1);
   }
   to {
     opacity: 1;
-    transform: translateY(0);
+    transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
   }
 }
 
@@ -111,84 +114,100 @@ body {
 
 @keyframes parallax {
   from {
-    transform: translateY(50px);
+    opacity: 0;
+    transform: translate3d(0, 50px, 0) scale3d(0.95, 0.95, 1);
   }
   to {
-    transform: translateY(0);
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
   }
 }
 
 @keyframes rotateScale {
   0% {
-    transform: scale(1) rotate(0deg);
+    transform: scale3d(1, 1, 1) rotate(0deg);
   }
   50% {
-    transform: scale(1.1) rotate(5deg);
+    transform: scale3d(1.1, 1.1, 1) rotate(5deg);
   }
   100% {
-    transform: scale(1) rotate(0deg);
+    transform: scale3d(1, 1, 1) rotate(0deg);
   }
 }
 
-/* Animation Classes */
 .animate-fade-in-up {
-  animation: fadeInUp 0.6s ease-out forwards;
+  animation: fadeInUp 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  will-change: transform, opacity;
 }
 
 .animate-scale-in {
-  animation: scaleIn 0.3s ease-in-out forwards;
+  animation: scaleIn 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  will-change: transform, opacity;
 }
 
 .animate-bounce {
-  animation: bounce 0.3s ease-in-out;
+  animation: bounce 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  will-change: transform;
 }
 
 .animate-bounce-around {
-  animation: bounceAround 6s ease-in-out infinite;
+  animation: bounceAround 8s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite;
+  will-change: transform;
 }
 
 .animate-zoom-in {
-  animation: zoomIn 0.3s ease-in-out forwards;
+  animation: zoomIn 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  will-change: transform;
 }
 
 .animate-stagger-fade-in {
-  animation: staggerFadeIn 0.8s ease-out forwards;
+  animation: staggerFadeIn 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  will-change: transform, opacity;
+  opacity: 0;
 }
 
 .animate-pulse-border {
-  animation: pulseBorder 1.5s infinite;
+  animation: pulseBorder 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  will-change: border-color, box-shadow;
 }
 
 .animate-parallax {
-  animation: parallax 1s ease-out forwards;
+  animation: parallax 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  will-change: transform, opacity;
 }
 
 .animate-rotate-scale {
-  animation: rotateScale 0.4s ease-in-out;
+  animation: rotateScale 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  will-change: transform;
 }
 
 .animate-on-scroll {
   opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  transform: translate3d(0, 30px, 0);
+  transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94), 
+              transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  will-change: transform, opacity;
 }
 
 .animate-on-scroll.visible {
   opacity: 1;
-  transform: translateY(0);
+  transform: translate3d(0, 0, 0);
 }
 
 .hover\:lift {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94), 
+              box-shadow 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  will-change: transform, box-shadow;
 }
 
 .hover\:lift:hover {
-  transform: translateY(-5px);
-  box-shadow: 4px 4px 0 #000;
+  transform: translate3d(0, -5px, 0);
+  box-shadow: 4px 8px 0 #000;
 }
 
 .hover\:border-pulse {
-  transition: border-color 0.3s ease;
+  transition: border-color 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  will-change: border-color;
 }
 
 .hover\:border-pulse:hover {
@@ -197,7 +216,7 @@ body {
 
 .hover\:underline-slide {
   position: relative;
-  transition: color 0.3s ease;
+  transition: color 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .hover\:underline-slide::after {
@@ -208,7 +227,8 @@ body {
   bottom: -2px;
   left: 0;
   background-color: #ffc700;
-  transition: width 0.3s ease;
+  transition: width 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  will-change: width;
 }
 
 .hover\:underline-slide:hover::after {
@@ -216,28 +236,62 @@ body {
 }
 
 .hover\:rotate-scale {
-  transition: transform 0.3s ease;
+  transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  will-change: transform;
 }
 
 .hover\:rotate-scale:hover {
-  transform: scale(1.1) rotate(5deg);
+  transform: scale3d(1.1, 1.1, 1) rotate(5deg);
 }
 
-/* Scroll Animation Trigger */
 [data-animate-on-scroll] {
   opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  transform: translate3d(0, 30px, 0);
+  transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94), 
+              transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  will-change: transform, opacity;
 }
 
 [data-animate-on-scroll].visible {
   opacity: 1;
-  transform: translateY(0);
+  transform: translate3d(0, 0, 0);
 }
 
-/* Staggered Animation Delays */
-.stagger-1 { animation-delay: 0.1s; }
-.stagger-2 { animation-delay: 0.2s; }
-.stagger-3 { animation-delay: 0.3s; }
-.stagger-4 { animation-delay: 0.4s; }
-.stagger-5 { animation-delay: 0.5s; }
+[data-aos] {
+  will-change: transform, opacity;
+}
+
+.stagger-1 { 
+  animation-delay: 0.1s; 
+  will-change: transform, opacity;
+}
+.stagger-2 { 
+  animation-delay: 0.25s; 
+  will-change: transform, opacity;
+}
+.stagger-3 { 
+  animation-delay: 0.4s; 
+  will-change: transform, opacity;
+}
+.stagger-4 { 
+  animation-delay: 0.55s; 
+  will-change: transform, opacity;
+}
+.stagger-5 { 
+  animation-delay: 0.7s; 
+  will-change: transform, opacity;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
